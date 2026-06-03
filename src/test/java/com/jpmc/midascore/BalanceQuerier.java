@@ -23,7 +23,6 @@ public class BalanceQuerier {
             return restTemplate.getForObject(url, Balance.class);
         } catch (RestClientException e) {
             log.error("Failed to fetch balance from Incentive API for userId: {}", userId, e);
-            // Fallback: Returns a default empty or zeroed balance rather than throwing a raw exception
             return new Balance(0.0); 
         }
     }
