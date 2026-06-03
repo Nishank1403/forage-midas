@@ -29,7 +29,7 @@ public class UserPopulator {
                     UserRecord user = new UserRecord(userData[0], Float.parseFloat(userData[1]));
                     databaseConduit.save(user);
                 } catch (NumberFormatException e) {
-                    // Gracefully handle parsing failures for individual malformed lines
+                    
                 }
             }
         }
